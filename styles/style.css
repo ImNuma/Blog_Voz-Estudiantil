@@ -1,0 +1,422 @@
+@import url('https://fonts.cdnfonts.com/css/mistrully');
+
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Mali&display=swap');
+
+/*
+FONTS:
+'Mistrully'
+'Arapey'
+'ADLaM Display';
+'Mali';
+*/
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background-color: #e8dfd3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+.container{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Navbar section */
+
+.nav{
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    background-color: rgba(241, 195, 133);
+    position: fixed;
+}
+
+.nav div.logo{
+    width: 180px;
+    height: 10px;
+    position: absolute;
+}
+
+.nav div.logo a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.9em;
+    font-family: 'Mistrully';
+}
+
+.nav div.logo a:hover {
+    color: #ffa200;
+}
+
+.nav div.main_list{
+    width: 600px;
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul{
+    width:100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+}
+
+.nav div.main_list ul li{
+    width: 120px;
+    height: 65px;
+}
+
+.nav div.main_list ul li a{
+    text-decoration: none;
+    color: #000000;
+    line-height: 65px;
+    text-transform: uppercase;
+    font-family: 'Arapey', serif;
+    font-size: 18px;
+}
+
+.nav div.main_list ul li a:hover{
+    color: #ffa200;
+    padding: 10px 20px;
+    background-color: #f5daab;
+}
+
+.nav div.media_button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    display: none;
+}
+
+.nav div.media_button button.main_media_button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.nav div.media_button button.main_media_button span{
+    width: 98%;
+    height: 1px;
+    display: block;
+    background-color: #000000;
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(1){
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+    background-color: #ffa200;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(2){
+    transform: rotateY(180deg);
+    transition: all 0.4s;
+    background-color: #ffa200;
+}
+
+.nav div.media_button button.main_media_button:hover span:nth-of-type(3){
+    transform: rotateY(180deg);
+    transition: all 0.3s;
+    background-color: #ffa200;
+}
+
+.nav div.media_button button.active span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active span:nth-of-type(2) {
+    display: none;
+}
+
+.nav div.media_button button.active span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -45deg);
+    position: absolute;
+    margin: 0;
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(1) {
+    transform: rotate3d(0, 0, 1, 20deg);
+}
+
+.nav div.media_button button.active:hover span:nth-of-type(3) {
+    transform: rotate3d(0, 0, 1, -20deg);
+}
+
+/* Home section */
+
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: #ddd;
+}
+
+/* Media query section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    .container{
+        margin: 0;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    
+    .container{
+        margin: 0;
+    }
+    
+    .nav div.logo{
+        margin-left: 15px;
+    }
+    
+    .nav div.main_list{
+        width: 100%;
+        margin-top: 65px;
+        height: 0px;
+        overflow: hidden;
+    }
+    
+    .nav div.show_list{
+        height: 200px;
+        border-bottom: 3px solid #ffa200;
+    }
+    
+    .nav div.main_list ul{
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        top: 80px;
+        right: 0;
+        left: 0;
+    }
+    
+    .nav div.main_list ul li{
+        width: 100%;
+        height: 40px;
+        background-color:#f5daab;
+    }
+    
+    .nav div.main_list ul li a{
+      text-align: center;
+        line-height: 40px;
+        width: 100%;
+        height: 40px;
+        display: table;
+    }
+    
+    .nav div.media_button{
+        display: block;
+    }
+}
+
+.quienesSomos {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.quienesSomos img {
+    width: 300px;
+    height: 300px;
+}
+
+.quienesSomos h1 {
+    margin-top: 3.5em;
+}
+
+.quienesSomos h2 {
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: #f5daab;
+    padding: 10px;
+    border: 3px solid #ffa200;
+    border-radius: 20px;
+    font-family: 'Mali', cursive;
+}
+
+.nuestraMision {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.nuestraMision h1 {
+    margin-top: 3.5em;
+}
+
+.nuestraMision h2 {
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: #f5daab;
+    padding: 10px;
+    border: 3px solid #ffa200;
+    border-radius: 20px;
+    font-family: 'Mali', cursive;
+}
+
+.nuestrosObjetivos {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.nuestrosObjetivos h1 {
+    margin-top: 3.5em;
+}
+
+.nuestrosObjetivos h2 {
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: #f5daab;
+    padding: 10px;
+    border: 3px solid #ffa200;
+    border-radius: 20px;
+    text-align: left ;
+}
+
+.nuestrosObjetivos li {
+    margin-left: 35px;
+    font-family: 'Mali', cursive;
+    list-style: none;
+}
+
+.nuestrosObjetivos li::before {content: "\273B"; color: #ffa200;
+    display: inline-block; width: 1em;
+    margin-left: -1em}
+
+.resaltar {
+    font-weight: 900;
+    color: #ffa200;
+    -webkit-text-stroke: 0.2px black;
+    font-family: 'ADLaM Display', cursive;
+}
+
+/* Efecto de resaltado */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.quienesSomos h1 {
+  font-family: 'ADLaM Display', cursive;
+  font-size: 3.5vh;
+  margin-left: clamp(5%, 29%, 29%);
+  margin-right: clamp(5%, 29%, 29%);
+  background-image: linear-gradient(#ffa200, #ffa200);
+  border-radius: 20px;
+  background-size: 100% 10px;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+   transition: background-size .7s, background-position .5s ease-in-out;
+}
+
+.quienesSomos h1:hover {
+  background-size: 100% 100%;
+  background-position: 0% 100%;
+  transition: background-position .7s, background-size .5s ease-in-out;
+}
+
+.nuestraMision h1 {
+    font-family: 'ADLaM Display', cursive;
+    font-size: 3.5vh;
+    margin-left: clamp(5%, 35%, 35%);
+    margin-right: clamp(5%, 35%, 35%);
+    background-image: linear-gradient(#ffa200, #ffa200);
+    border-radius: 20px;
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+     transition: background-size .7s, background-position .5s ease-in-out;
+  }
+  
+  .nuestraMision h1:hover {
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    transition: background-position .7s, background-size .5s ease-in-out;
+  }
+
+  .nuestrosObjetivos h1 {
+    font-family: 'ADLaM Display', cursive;
+    font-size: 3.5vh;
+    margin-left: clamp(5%, 35%, 35%);
+    margin-right: clamp(5%, 35%, 35%);
+    background-image: linear-gradient(#ffa200, #ffa200);
+    border-radius: 20px;
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+     transition: background-size .7s, background-position .5s ease-in-out;
+  }
+  
+  .nuestrosObjetivos h1:hover {
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    transition: background-position .7s, background-size .5s ease-in-out;
+  }
+
+  .githubImage {
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    /* background-color: gold; */
+    border-radius: 50%;
+  }
+
+  .githubImage:hover {
+    transform: scale(1.3);
+    background-color: gold;
+  }
+
+  footer {
+    background-color: #f5daab;
+    text-align: center;
+    color: #ffa200;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.5px #ffa200;
+    font-size: 25px;
+    margin: 0;
+    margin-top: 10%;
+    padding: 15px;
+    border-top-style: groove;
+    border-width: 10px;
+    border-color:#ffa200;
+    -webkit-box-shadow: 0px 0px 11px 3px gold;
+    -moz-box-shadow: 0px 0px 11px 3px gold;
+    box-shadow: 0px 0px 11px 3px gold;
+}
+  
+/* Efecto de resaltado FIN */
