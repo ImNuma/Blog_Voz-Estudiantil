@@ -372,8 +372,8 @@ body {
   .nuestrosObjetivos h1 {
     font-family: 'ADLaM Display', cursive;
     font-size: 3.5vh;
-    margin-left: clamp(5%, 35%, 35%);
-    margin-right: clamp(5%, 35%, 35%);
+    margin-left: clamp(5%, 29%, 29%);
+    margin-right: clamp(5%, 29%, 29%);
     background-image: linear-gradient(#ffa200, #ffa200);
     border-radius: 20px;
     background-size: 100% 10px;
